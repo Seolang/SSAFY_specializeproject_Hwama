@@ -6,27 +6,27 @@ using UnityEngine;
 
 public class HttpController : MonoBehaviour
 {
-    // Spring ¼­¹ö URL
-    private string _url = "https://j9b101.p.ssafy.io/api";
+    // Spring ì„œë²„ URL
+    private string _url = "";
 
     public string URL
     {
         get { return _url; }
     }
 
-    // HTTP GET ¿äÃ» ÄÚ·çÆ¾ ¸Ş¼Òµå
+    // HTTP GET ìš”ì²­ ì½”ë£¨í‹´ ë©”ì†Œë“œ
     public IEnumerator DoGet<T>(string url, Action<CommonResponse<T>> success, Action<ErrorResponse> fail)
     {
-        // request »ı¼º
+        // request ìƒì„±
         using UnityWebRequest request = new UnityWebRequest(url, "GET");
 
         request.SetRequestHeader("Content-Type", "application/json");
         request.downloadHandler = new DownloadHandlerBuffer();
 
-        // ÀÀ´ä ´ë±â
+        // ì‘ë‹µ ëŒ€ê¸°
         yield return request.SendWebRequest();
 
-        // ¿äÃ» ¼º°ø ½ÇÆĞ¿¡ µû¶ó Äİ¹é ÇÔ¼ö¿¡ °á°ú¸¦ ³Ö¾î ½ÇÇà
+        // ìš”ì²­ ì„±ê³µ ì‹¤íŒ¨ì— ë”°ë¼ ì½œë°± í•¨ìˆ˜ì— ê²°ê³¼ë¥¼ ë„£ì–´ ì‹¤í–‰
         if (request.result == UnityWebRequest.Result.Success)
         {
             success(JsonConvert.DeserializeObject<CommonResponse<T>>(request.downloadHandler.text));
@@ -38,14 +38,14 @@ public class HttpController : MonoBehaviour
 
     }
 
-    // HTTP POST ¿äÃ» ÄÚ·çÆ¾ ¸Ş¼Òµå
+    // HTTP POST ìš”ì²­ ì½”ë£¨í‹´ ë©”ì†Œë“œ
     public IEnumerator DoPost<T, S>(string url, T data, Action<CommonResponse<S>> success, Action<ErrorResponse> fail)
     {
 
 
         using UnityWebRequest request = new UnityWebRequest(url, "POST");
 
-        // °´Ã¼ µ¥ÀÌÅÍ¸¦ °´Ã¼ -> JSON -> Bytes ·Î º¯È¯
+        // ê°ì²´ ë°ì´í„°ë¥¼ ê°ì²´ -> JSON -> Bytes ë¡œ ë³€í™˜
         string json = JsonConvert.SerializeObject(data);
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
 
