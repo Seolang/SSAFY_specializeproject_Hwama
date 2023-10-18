@@ -25,5 +25,8 @@
 - HTTP 모듈 사용 예시 : [RankManager.cs](/Client/Script/Managers/RankManager.cs)
   
 ### SpringBoot
+![로비랭킹목록](/Exec/ReadmeImg/로비랭킹목록.gif)
+![결과화면](./Exec/ReadmeImg/결과화면.gif)
+<br/>
 - 기록 관리 API 서비스 : [RecordService.java](Server/webserver/src/main/java/com/onlyone/gameserver/api/service/RecordService.java)
 - 기록 관리 API 레포지토리 : [RecordRepo.java](/Server/webserver/src/main/java/com/onlyone/gameserver/db/repository/RecordRepo.java)
