@@ -21,8 +21,9 @@
 
 ## 핵심 개발 소스코드
 ### Unity
-- HTTP 통신 모듈 [HttpController.cs](/Client/Script/WebAPI/Controller/HttpController.cs)
-- HTTP 모듈 사용 예시 [RankManager.cs](/Client/Script/Managers/RankManager.cs)
+- HTTP 통신 모듈 - [HttpController.cs](/Client/Script/WebAPI/Controller/HttpController.cs)
+- HTTP 모듈 사용 예시 - [RankManager.cs](/Client/Script/Managers/RankManager.cs)
 ### SpringBoot
-- 
+- 기록 관리 API 서비스 - [RecordService.java](Server/webserver/src/main/java/com/onlyone/gameserver/api/service/RecordService.java)
+- 기록 관리 API 레포지토리 - [RecordRepo.java](/Server/webserver/src/main/java/com/onlyone/gameserver/db/repository/RecordRepo.java)
 
