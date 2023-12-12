@@ -38,7 +38,7 @@
 # 3️⃣ 개발 환경
 
 ## 시스템 아키텍쳐
-![Alt text](architecture.jpg)
+![architecture](./Exec/아키텍처/architecture.jpg)
 
 ## 기술 스택
 ### ⚙ Management Tool
