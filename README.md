@@ -37,6 +37,10 @@
   
 # 3️⃣ 개발 환경
 
+## 시스템 아키텍쳐
+![Alt text](architecture.jpg)
+
+## 기술 스택
 ### ⚙ Management Tool
 
 -   형상 관리 : Gitlab, 외장SSD(에셋용)
