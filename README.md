@@ -86,12 +86,11 @@
 
 ### 🌁 Infra
 
--   Jenkins 2.401.3
 -   docker-compose
 -   SSL
 -   Nginx
 
-### 🎞 Storage
+### 🎞 Cloud
 
 -   Amazon EC2(Ubuntu 20.04)
 
